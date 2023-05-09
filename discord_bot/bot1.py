@@ -4,12 +4,12 @@ from json import dumps
 from time import sleep
 import random
 
-file = open("info.txt")
+file = open("info1.txt")
 text = file.read().splitlines()
 
 if len(sys.argv) > 1 and sys.argv[1] == "--setall" and input("Configure bot? (y/n)") == "y":
     file.close()
-    file = open("info.txt", "w")
+    file = open("info1.txt", "w")
     text = []
     text.append(input("User agent: "))
     text.append(input("Discord token: "))
@@ -26,7 +26,7 @@ elif len(sys.argv) > 1 and sys.argv[1] == "--setchannel" and input("Set channel?
     token = text[1]
     text = text[0:2]
     file.close()
-    file = open("info.txt", "w")
+    file = open("info1.txt", "w")
     text.append(input("Discord channel URL: "))
     text.append(input("Discord channel ID: "))
     for parameter in text:
@@ -39,7 +39,7 @@ elif len(sys.argv) > 1 and sys.argv[1] == "--setauth" and input("Set authenticat
     channelid = text[3]
     text = text[2:4]
     file.close()
-    file = open("info.txt", "w")
+    file = open("info1.txt", "w")
     text.insert(0, input("Discord token: "))
     text.insert(0, input("User agent: "))
     for parameter in text:
@@ -58,7 +58,7 @@ elif len(sys.argv) > 1 and sys.argv[1] == "--help":
     exit()
 
 if len(text) != 4:
-    print("An error was found inside the user information file. Run the script with the 'Set All' flag ('python3 bot.py --setall') to reconfigure.")
+    print("An error was found inside the user info1rmation file. Run the script with the 'Set All' flag ('python3 bot.py --setall') to reconfigure.")
     exit()
     
 if len(sys.argv) > 1:
@@ -107,36 +107,31 @@ def main(msg):
 
 
 randomMessage = [
-    "ae cày kéo đến đâu rồi, có mỏi tay không =))",
-    "mai lên lv7 hết thôiii, cố lên ae", 
-    "chúng ta sắp thành công rồi anh em ơi",
-    "Chúng ta sắp giàu rồi anh em ơi",
-    "aaaaa, phải cố lên thôi",
-    "hehehe, cố lên mn, sắp đc rồi",
-    "chuẩn bị ngủ thôii",
-    "nhiều bác kêu nhiệm vụ 6 khó nhỉ mình làm trước ngay khi sei đăng bài đến khi nhiệm vụ ra bấm vèo cái xong rùi",
-    "mấy hôm không vào, hình như tăng thành viên hic bị chặn chat lên đến 2 phút lận :(((",
-    "Sao Rồi ae ai cho xin cái form với nào,mình sắp lv7 rồi còn 6lv nữa thôi",
-    "bác nòa có cho e xin ít 0.2 thôi", 
-    "cày lên lv 20 chắc cũng căng à nha ngồi 6-7 ngày  liên tục",
-    "cứ chat thôi bác… nó lên đc nhiêu thì lên!!! Nếu giỏi English bác qua General chat nhanh hơn, 1/1p",
-    "Sắp đc rồi, mọi người đừng nản",
-    "cố lên minaaa",
-    "nếu mọi người không biết, thì tôi chạy bốt hehe",
-    "bye bye, hẹn gặp lại mọi người",
-    "cày được lv10 đỉnh quá",
-    "chào các pro! chúc mọi người 1 ngày mới tốt lành nhé",
-    "Nhiều ông cứ cày trước rồi huy động họ hàng vào kyc là cái chắc",
-    "thần kinh với cái Liquid quá. giờ kiếm đâu sei mà swap rồi add??",
-    "Mà kèo aidrop toàn tính trước mấy tháng",
-    "ae chats mạnh quá đọc tin hoa cả mắt @@",
-    "thôi cố thêm 1h mn nữa ạ",
-    "Gần được các brooo ơi",
-    "Cho mình xin cái form với nào, mình sắp lv7 rồi còn vài lv nữa thôi",
-    "Ngủ chưa ae",
-    "Lên 7 còn đi ngủ nào",
-    "vn mình cày air chiến thật",
-    "Cho tôi lên level 6 đi các ông ơi. Chat cả tiếng sao mãi chưa lên được huhu",
+    "第8个也不难呀。哪里会难。就是卡。第8个也不难呀。哪里会难",
+    "现在水怎么变那么少了 没人卷  你们不是人均100号吧",
+    "水还是不好领啊",
+    "100个号到时候主网交互成本都不少",
+    "没人卷  你们不是人均100号吧",
+    "有什么可做的，做完了，一周搞一次就是了",
+    "你们是真卷啊，现在还在做",
+    "昨天领的多",
+    "没有其他任务可以做吧",
+    "0.1个，想做点啥要领好几天",
+    "我都想进树林继续伐木了",
+    "才换这么点 都不够加流动性",
+    "大伙第八个任务 是不是SEI都不够用啦",
+    "中文群一堆发乱七八糟的机器人，不闻不问，真是莫名其妙！",
+    "这狗项目到底啥时候才主网啊",
+    "这项目还能玩吗",
+    "每个区的30秒都不同步的，好吧",
+    "ご自身の国のチャンネルに投稿してください！",
+    "有时候得刷好几次才成功",
+    "机器人都没见踢，那得多水才被踢",
+    "我等好多天,都卡著怪怪的",
+    "任务6做不了现在。等几天吧",
+    "多解答问题，太水了要遭踢",
+    "加油加油冲冲冲冲冲",
+    "水群等级吗？不难。就哔哔就行了"
     ]
 
 if __name__ == '__main__':

@@ -23,3 +23,11 @@ The script contains a builtin help command. Invoke it as such:
 ```
 [Made by @nonrice on Github.](https://github.com/nonrice)
 
+## Set up file info.txt
+1st Line: User agent
+2nd Line: User discord token
+3rd Line: Discord channel URL
+4th Line: Discord channel ID
+
+Get 2nd line at this link: https://www.androidauthority.com/get-discord-token-3149920/
+Get 1st line the same way as 2nd line
